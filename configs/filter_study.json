@@ -1,0 +1,46 @@
+{
+    "log_interval": 5000,
+    "filter_type": "entropy",
+    "filter_op": "ge",
+    "thresholds": "0.0,0.1,0.2,0.3,0.4,0.5",
+    "datasets": [
+        {
+            "name": "WILDSCamelyon",
+            "train_envs": [
+                1
+            ],
+            "test_envs": [
+                4
+            ],
+            "model": "resnet50-GN",
+            "seed": 0
+        },
+        {
+            "name": "WILDSCamelyon",
+            "train_envs": [
+                2
+            ],
+            "test_envs": [
+                4
+            ],
+            "model": "resnet50-GN",
+            "seed": 0
+        },
+        {
+            "name": "ImageNetC",
+            "train_envs": [
+                -1
+            ],
+            "test_envs": [
+                [
+                    2
+                ],
+                [
+                    4
+                ]
+            ],
+            "model": "resnet50-GN",
+            "seed": 0
+        }
+    ]
+}

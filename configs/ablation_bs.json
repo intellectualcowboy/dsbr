@@ -1,0 +1,25 @@
+{
+  "batch_size": [1, 4, 16, 64, 128],
+  "algorithms": {
+    "Tent": {},
+    "DSBR": {
+      "ema_alpha": [0.99, 0.95, 0.9, 0.0]
+    }
+  },
+  "datasets": [
+    {
+      "name": "ImageNetC",
+      "train_envs": [[-1]],
+      "test_envs": [[4]],
+      "model": ["ViT-B16", "resnet50-GN"],
+      "seed": [2023, 2024, 2025]
+    },
+    {
+        "name": "WILDSCamelyon",
+        "train_envs": [[1]],
+        "test_envs": [[4]],
+        "model": ["ViT-B16", "resnet50-GN"],
+        "seed": [2023, 2024, 2025]
+    }
+  ]
+}

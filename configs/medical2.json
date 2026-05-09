@@ -1,0 +1,40 @@
+{
+  "batch_size": [32],
+  "algorithms": {
+    "Tent": {
+      "use_come": [true, false]
+    },
+    "DSBR": {},
+    "SAR": {
+      "use_come": [true, false]
+    },
+    "DeYO": {},
+    "ROID": {}
+  },
+  "datasets": [
+    {
+        "name": "GliomaMRI",
+        "train_envs": [[0], [1], [2]],
+        "model": ["monai-ViT", "monai-resnet10"],
+        "seed": [2026, 2027, 2028]
+    },
+    {
+        "name": "WILDSCamelyon",
+        "train_envs": [[0], [1], [2], [3], [4]],
+        "model": ["ViT-B16", "resnet50-GN"],
+        "seed": [2026, 2027, 2028]
+    },
+    {
+        "name": "Histopantume",
+        "train_envs": [[0], [1], [2], [3]],
+        "model": ["ViT-B16", "resnet50-GN"],
+        "seed": [2026, 2027, 2028]
+    },
+    {
+        "name": "MammoBench",
+        "train_envs": [[0], [1], [2], [3], [4]],
+        "model": ["ViT-B16", "resnet50-GN"],
+        "seed": [2026, 2027, 2028]
+    }
+  ]
+}

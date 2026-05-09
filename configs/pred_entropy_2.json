@@ -1,0 +1,46 @@
+{
+  "batch_size": [32],
+  "algorithms": {
+    "Tent": {}
+  },
+  "datasets": [
+    {
+      "name": "ImageNetC",
+      "train_envs": [[-1]],
+      "test_envs": [[2], [7], [12], [17], [22], [27], [32], [37], [42], [47], [52], [57], [62], [67], [72]],
+      "model": ["resnet50-GN"],
+      "seed": [2023, 2024, 2025]
+    },
+    {
+        "name": "GliomaMRI",
+        "train_envs": [[0], [1], [2]],
+        "model": ["monai-resnet10"],
+        "seed": [2023, 2024, 2025]
+    },
+    {
+        "name": "Histopantume",
+        "train_envs": [[0], [1], [2], [3]],
+        "model": ["resnet50-GN"],
+        "seed": [2023, 2024, 2025]
+    },
+    {
+        "name": "MammoBench",
+        "train_envs": [[0], [1], [2], [3], [4]],
+        "model": ["resnet50-GN"],
+        "seed": [2023, 2024, 2025]
+    },
+    {
+      "name": "ImageNetC",
+      "train_envs": [[-1]],
+      "test_envs": [[4], [9], [14], [19], [24], [29], [34], [39], [44], [49], [54], [59], [64], [69], [74]],
+      "model": ["resnet50-GN"],
+      "seed": [2023, 2024, 2025]
+    },
+    {
+        "name": "WILDSCamelyon",
+        "train_envs": [[0], [1], [2], [3], [4]],
+        "model": ["resnet50-GN"],
+        "seed": [2023, 2024, 2025]
+    }
+  ]
+}

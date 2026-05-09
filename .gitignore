@@ -1,0 +1,9 @@
+data/
+*__pycache__/
+launch.json
+.vscode/
+output/
+wandb/
+/scripts/
+slurm/
+figure1/

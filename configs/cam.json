@@ -1,0 +1,49 @@
+{
+  "batch_size": [32],
+  "algorithms": {
+    "Tent": {},
+    "DSBR": {
+        "ema_alpha": [0.9, 0.99]
+    },
+    "SAR": {},
+    "DeYO": {},
+    "ROID": {}
+  },
+  "datasets": [
+    {
+        "name": "WILDSCamelyon",
+        "train_envs": [[0]],
+        "test_envs": [[1], [2], [3], [4]],
+        "model": ["ViT-B16", "resnet50-GN"],
+        "seed": [2023, 2024, 2025, 2026, 2027]
+    },
+    {
+        "name": "WILDSCamelyon",
+        "train_envs": [[1]],
+        "test_envs": [[0], [2], [3], [4]],
+        "model": ["ViT-B16", "resnet50-GN"],
+        "seed": [2023, 2024, 2025, 2026, 2027]
+    },
+    {
+        "name": "WILDSCamelyon",
+        "train_envs": [[2]],
+        "test_envs": [[0], [1], [3], [4]],
+        "model": ["ViT-B16", "resnet50-GN"],
+        "seed": [2023, 2024, 2025, 2026, 2027]
+    },
+    {
+        "name": "WILDSCamelyon",
+        "train_envs": [[3]],
+        "test_envs": [[0], [1], [2], [4]],
+        "model": ["ViT-B16", "resnet50-GN"],
+        "seed": [2023, 2024, 2025, 2026, 2027]
+    },
+    {
+        "name": "WILDSCamelyon",
+        "train_envs": [[4]],
+        "test_envs": [[0], [1], [2], [3]],
+        "model": ["ViT-B16", "resnet50-GN"],
+        "seed": [2023, 2024, 2025, 2026, 2027]
+    }
+  ]
+}
