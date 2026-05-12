@@ -478,7 +478,6 @@ class DSBR(Tent):
         # local_cluster_ditribution = outputs.softmax(dim=1).mean(dim=0).detach()
         
         self.cluster_ditribution = self.ema_alpha * self.cluster_ditribution.to(entropies.device) + (1 - self.ema_alpha) * local_cluster_ditribution
-        print(torch.min(self.num_classes * self.cluster_ditribution[cluster_ids]).item())
         entropies = entropies / (self.num_classes * self.cluster_ditribution[cluster_ids])
         
 
