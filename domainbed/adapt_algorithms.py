@@ -473,13 +473,11 @@ class DSBR(Tent):
         outputs = model(x)
         # adapt
         entropies = self.entropy_fn(outputs)
+        
         cluster_ids = outputs.argmax(dim=1)
         local_cluster_ditribution = torch.bincount(cluster_ids, minlength=self.num_classes) / len(cluster_ids)
-        # local_cluster_ditribution = outputs.softmax(dim=1).mean(dim=0).detach()
-        
         self.cluster_ditribution = self.ema_alpha * self.cluster_ditribution.to(entropies.device) + (1 - self.ema_alpha) * local_cluster_ditribution
         entropies = entropies / (self.num_classes * self.cluster_ditribution[cluster_ids])
-        
 
         loss = entropies.mean(0)
         loss.backward()
